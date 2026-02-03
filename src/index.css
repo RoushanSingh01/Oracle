@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. The Deep Dark Background */
+body {
+  background-color: #050505;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 2. THE PURPLE BLOBS (The "Lights") */
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  /* Brighter Purple */
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, rgba(0,0,0,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  /* Brighter Blue */
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, rgba(0,0,0,0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
